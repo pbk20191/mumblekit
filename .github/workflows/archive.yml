@@ -92,7 +92,7 @@ jobs:
       - name: Upload MumbleKit (iOS) Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: MumbleKit-iOS
+          name: MumbleKit-iOS-${{ github.event.inputs.build_type }}
           path: __build__/archives
 
 
