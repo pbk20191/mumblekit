@@ -1,6 +1,15 @@
 name: Archive
 on:
   workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Select build configuration (Release or Debug)'
+        required: true
+        default: 'Release'
+        type: choice
+        options:
+          - Release
+          - Debug
 env:
   buildDir: ${{ github.workspace }}/build/
 
@@ -33,7 +42,7 @@ jobs:
       - name: Archive MumbleKit (iOS) 
         run: |
           set -o pipefail && xcodebuild archive -UseModernBuildSystem=NO -scheme "MumbleKit (iOS)" \
-          -configuration Release \
+          -configuration ${{ github.event.inputs.build_type }} \
           -project MumbleKit.xcodeproj \
           -sdk iphoneos \
           -destination 'generic/platform=iOS' \
@@ -51,7 +60,7 @@ jobs:
       - name: Archive MumbleKit (iOS Simulator) 
         run: |
           set -o pipefail && xcodebuild archive -UseModernBuildSystem=NO -scheme "MumbleKit (iOS)" \
-          -configuration Release \
+          -configuration ${{ github.event.inputs.build_type }} \
           -project MumbleKit.xcodeproj \
           -sdk iphonesimulator \
           -destination "generic/platform=iOS Simulator" \
