@@ -32,7 +32,7 @@ jobs:
           set -o pipefail && xcodebuild archive -UseModernBuildSystem=NO -scheme "MumbleKit (Mac)" \
           -configuration Release \
           -project MumbleKit.xcodeproj \
-          -sdk iphoneos \
+          -sdk macosx \
           -destination 'generic/platform=macOS' \
           -archivePath "${PWD}/__build__/archives/MumbleKit-macOS" \
           CONFIGURATION_BUILD_DIR=${PWD}/__build__/mac | xcpretty
