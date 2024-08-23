@@ -35,6 +35,8 @@ jobs:
           -sdk macosx \
           -destination 'generic/platform=macOS' \
           -archivePath "${PWD}/__build__/archives/MumbleKit-macOS" \
+          SKIP_INSTALL=NO \
+          BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
           CONFIGURATION_BUILD_DIR=${PWD}/__build__/mac | xcpretty
                  
       - name: Print xcarchive macOS structure
@@ -95,8 +97,6 @@ jobs:
       - name: create iOS xcframework
         run: |
           set -o pipefail && xcodebuild -create-xcframework \
-          -archive ${PWD}/__build__/archives/MumbleKit-macOS.xcarchive \
-          -framework MumbleKit.framework \
           -archive ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive \
           -library libMumbleKit.a -headers "${PWD}/src/MumbleKit" \
           -archive ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive \
