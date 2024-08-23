@@ -69,12 +69,12 @@ jobs:
         run: |
           set -o pipefail && xcodebuild -create-xcframework \
           -archive ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive \
-          -library libMumbleKit.a -headers "${PWD}/src/MumbleKit" \
-          -library libOpenSSL.a -library libProtocolBuffers.a -library libSpeexDSP.a -library libCELT-0.7.0.a -library libOpus.a -library libSpeex.a \
+          -library libMumbleKit.a -library libOpenSSL.a -library libProtocolBuffers.a -library libSpeexDSP.a \
+          -library libCELT-0.7.0.a -library libOpus.a -library libSpeex.a -headers "${PWD}/src/MumbleKit"\
           -debug-symbols ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive/dSYMs \
           -archive ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive \
-          -library libMumbleKit.a -headers "${PWD}/src/MumbleKit" \
-          -library libOpenSSL.a -library libProtocolBuffers.a -library libSpeexDSP.a -library libCELT-0.7.0.a -library libOpus.a -library libSpeex.a \
+          -library libMumbleKit.a -library libOpenSSL.a -library libProtocolBuffers.a -library libSpeexDSP.a \
+          -library libCELT-0.7.0.a \-library libOpus.a -library libSpeex.a -headers "${PWD}/src/MumbleKit" \
           -debug-symbols ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive/dSYMs \
           -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
  
