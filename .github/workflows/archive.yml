@@ -65,18 +65,18 @@ jobs:
           echo "Printing the structure of the xcarchive:"
           find ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive
           
-      - name: create iOS xcframework
-        run: |
-          set -o pipefail && xcodebuild -create-xcframework \
-          -archive ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive \
-          -library libMumbleKit.a -library libOpenSSL.a -library libProtocolBuffers.a -library libSpeexDSP.a \
-          -library libCELT-0.7.0.a -library libOpus.a -library libSpeex.a -headers "${PWD}/src/MumbleKit"\
-          -debug-symbols ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive/dSYMs \
-          -archive ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive \
-          -library libMumbleKit.a -library libOpenSSL.a -library libProtocolBuffers.a -library libSpeexDSP.a \
-          -library libCELT-0.7.0.a \-library libOpus.a -library libSpeex.a -headers "${PWD}/src/MumbleKit" \
-          -debug-symbols ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive/dSYMs \
-          -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
+      # - name: create iOS xcframework
+      #   run: |
+      #     set -o pipefail && xcodebuild -create-xcframework \
+      #     -archive ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive \
+      #     -library libMumbleKit.a -library libOpenSSL.a -library libProtocolBuffers.a -library libSpeexDSP.a \
+      #     -library libCELT-0.7.0.a -library libOpus.a -library libSpeex.a -headers "${PWD}/src/MumbleKit"\
+      #     -debug-symbols ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive/dSYMs \
+      #     -archive ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive \
+      #     -library libMumbleKit.a -library libOpenSSL.a -library libProtocolBuffers.a -library libSpeexDSP.a \
+      #     -library libCELT-0.7.0.a \-library libOpus.a -library libSpeex.a -headers "${PWD}/src/MumbleKit" \
+      #     -debug-symbols ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive/dSYMs \
+      #     -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
  
 
       # Upload MumbleKit (iOS) Build Artifacts
@@ -84,4 +84,12 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: MumbleKit-iOS
-          path: __build__/xcframework/
+          path: __build__/archives/MumbleKit-iOS.xcarchive
+
+          
+      - name: Upload MumbleKit (iOS-Simulator) Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: MumbleKit-iOS-Simulator
+          path: __build__/archives/MumbleKit-iOS_Simulator.xcarchive
+
