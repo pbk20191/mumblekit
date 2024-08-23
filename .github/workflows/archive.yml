@@ -51,10 +51,10 @@ jobs:
           BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
           CONFIGURATION_BUILD_DIR=${PWD}/__build__/ios | xcpretty
 
-      - name: Print xcarchive iOS structure
-        run: |
-          echo "Printing the structure of the xcarchive:"
-          find ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive
+      # - name: Print xcarchive iOS structure
+      #   run: |
+      #     echo "Printing the structure of the xcarchive:"
+      #     find ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive
 
       # Archive MumbleKit (iOS Simulator) static Framework
       - name: Archive MumbleKit (iOS Simulator) 
@@ -69,10 +69,10 @@ jobs:
           BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
           CONFIGURATION_BUILD_DIR=${PWD}/__build__/ios_sim | xcpretty
           
-      - name: Print directory sim structure after build
-        run: |
-          echo "Printing the structure of the xcarchive:"
-          find ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive
+      # - name: Print directory sim structure after build
+      #   run: |
+      #     echo "Printing the structure of the xcarchive:"
+      #     find ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive
           
       # - name: create iOS xcframework
       #   run: |
@@ -86,6 +86,15 @@ jobs:
       #     -library libCELT-0.7.0.a \-library libOpus.a -library libSpeex.a -headers "${PWD}/src/MumbleKit" \
       #     -debug-symbols ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive/dSYMs \
       #     -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
+      
+      - name: create iOS xcframework
+        run: |
+          set -o pipefail && xcodebuild -create-xcframework \
+          -archive ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive \
+          -library libMumbleKit.a -headers "${PWD}/src/MumbleKit"\
+          -archive ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive \
+          -library libMumbleKit.a -headers "${PWD}/src/MumbleKit" \
+          -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
  
 
       # Upload MumbleKit (iOS) Build Artifacts
@@ -93,6 +102,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: MumbleKit-iOS-${{ github.event.inputs.build_type }}
-          path: __build__/archives
+          path: __build__/xcframework
 
 
