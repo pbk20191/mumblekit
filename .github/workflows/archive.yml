@@ -70,10 +70,10 @@ jobs:
           set -o pipefail && xcodebuild -create-xcframework \
           -archive ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive \
           -library libMumbleKit.a -headers "${PWD}/src/MumbleKit" \
-          -debug-symbols ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive/dSYMs
+          -debug-symbols ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive/dSYMs \
           -archive ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive \
           -library libMumbleKit.a -headers "${PWD}/src/MumbleKit" \
-          -debug-symbols ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive/dSYMs
+          -debug-symbols ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive/dSYMs \
           -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
  
 
