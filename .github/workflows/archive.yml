@@ -84,12 +84,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: MumbleKit-iOS
-          path: __build__/archives/MumbleKit-iOS.xcarchive
+          path: __build__/archives
 
-          
-      - name: Upload MumbleKit (iOS-Simulator) Artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: MumbleKit-iOS-Simulator
-          path: __build__/archives/MumbleKit-iOS_Simulator.xcarchive
 
