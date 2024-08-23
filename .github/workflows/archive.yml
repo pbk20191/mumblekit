@@ -30,7 +30,7 @@ jobs:
       - name: Build MumbleKit (Mac)
         run: |
           set -o pipefail && xcodebuild archive -UseModernBuildSystem=NO -scheme "MumbleKit (Mac)" \
-          -configuration Release \
+          -configuration ${{ github.event.inputs.build_type }} \
           -project MumbleKit.xcodeproj \
           -sdk macosx \
           -destination 'generic/platform=macOS' \
@@ -40,7 +40,7 @@ jobs:
       - name: Print xcarchive macOS structure
         run: |
           echo "Printing the structure of the xcarchive:"
-          ls -R ${PWD}/__build__/archives/MumbleKit-macOS.xcarchive
+          find ${PWD}/__build__/archives/MumbleKit-macOS.xcarchive
         #  -archive "${PWD}/__build__/archives/MumbleKit-macOS.xcarchive" -framework MumbleKit.framework
 
       # Archive MumbleKit (iOS) static Framework
@@ -101,8 +101,14 @@ jobs:
           -library libMumbleKit.a -headers "${PWD}/src/MumbleKit" \
           -archive ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive \
           -library libMumbleKit.a -headers "${PWD}/src/MumbleKit" \
-          -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
- 
+          -output ${PWD}/__build__/xcframework/MumbleKit-iOS.xcframework | xcpretty
+
+      - name: create macOS xcframework
+        run: |
+          set -o pipefail && xcodebuild -create-xcframework \
+          -archive ${PWD}/__build__/archives/MumbleKit-macOS.xcarchive \
+          -framework MumbleKit.framework \
+          -output ${PWD}/__build__/xcframework/MumbleKit-macOS.xcframework | xcpretty
 
       # Upload MumbleKit Build Artifacts
       - name: Upload MumbleKit Artifacts
