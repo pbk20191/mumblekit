@@ -29,7 +29,7 @@ jobs:
       # Archive MumbleKit (Mac) Dynamic Framework
       - name: Build MumbleKit (Mac)
         run: |
-          set -o pipefail && xcodebuild archive -UseModernBuildSystem=NO -scheme "MumbleKit (Mac)" \
+          set -o pipefail && xcodebuild archive -scheme "MumbleKit-static" \
           -configuration Release \
           -project MumbleKit.xcodeproj \
           -sdk iphoneos \
@@ -46,7 +46,7 @@ jobs:
       # Archive MumbleKit (iOS) static Framework
       - name: Archive MumbleKit (iOS) 
         run: |
-          set -o pipefail && xcodebuild archive -UseModernBuildSystem=NO -scheme "MumbleKit (iOS)" \
+          set -o pipefail && xcodebuild archive -scheme "MumbleKit-static" \
           -configuration ${{ github.event.inputs.build_type }} \
           -project MumbleKit.xcodeproj \
           -sdk iphoneos \
@@ -64,7 +64,7 @@ jobs:
       # Archive MumbleKit (iOS Simulator) static Framework
       - name: Archive MumbleKit (iOS Simulator) 
         run: |
-          set -o pipefail && xcodebuild archive -UseModernBuildSystem=NO -scheme "MumbleKit (iOS)" \
+          set -o pipefail && xcodebuild archive -scheme "MumbleKit-static" \
           -configuration ${{ github.event.inputs.build_type }} \
           -project MumbleKit.xcodeproj \
           -sdk iphonesimulator \
@@ -91,16 +91,22 @@ jobs:
       #     -library libCELT-0.7.0.a \-library libOpus.a -library libSpeex.a -headers "${PWD}/src/MumbleKit" \
       #     -debug-symbols ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive/dSYMs \
       #     -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
+
+      - name: package Header files
+        run: |
+          mkdir -p ${PWD}/__build__/Headers/MumbleKit \ &&
+          cp ${PWD}/module.modulemap ${PWD}/__build__/Headers \ &&
+          cp -R ${PWD}/src/MumbleKit/*.h ${PWD}/__build__/Headers/MumbleKit
       
-      - name: create iOS xcframework
+      - name: create Mumble xcframework
         run: |
           set -o pipefail && xcodebuild -create-xcframework \
           -archive ${PWD}/__build__/archives/MumbleKit-macOS.xcarchive \
-          -framework MumbleKit.framework \
+          -library libMumbleKit.a -headers ${PWD}/__build__/Headers/MumbleKit \
           -archive ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive \
-          -library libMumbleKit.a -headers "${PWD}/src/MumbleKit" \
+          -library libMumbleKit.a -headers ${PWD}/__build__/Headers/MumbleKit \
           -archive ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive \
-          -library libMumbleKit.a -headers "${PWD}/src/MumbleKit" \
+          -library libMumbleKit.a -headers ${PWD}/__build__/Headers/MumbleKit \
           -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
  
 
