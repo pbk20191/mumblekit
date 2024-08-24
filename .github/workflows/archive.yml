@@ -22,7 +22,7 @@ jobs:
           submodules: 'recursive'
       - uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '13.1'
+          xcode-version: '15'
       - name: Install xcpretty
         run: gem install --verbose xcpretty
         
