@@ -44,7 +44,19 @@ jobs:
           SKIP_INSTALL=NO \
           BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
           CONFIGURATION_BUILD_DIR=${PWD}/__build__/mac | xcpretty
-                 
+
+      # Archive MumbleKit (Mac Catalyst)
+      - name: Build MumbleKit (Mac Catalyst)
+        run: |
+          set -o pipefail && xcodebuild archive -scheme "MumbleKit-static" \
+          -configuration Release \
+          -project MumbleKit.xcodeproj \
+          -destination 'generic/platform=macOS,variant=Mac Catalyst' \
+          -archivePath "${PWD}/__build__/archives/MumbleKit-MacCatalyst" \
+          SKIP_INSTALL=NO \
+          BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
+          CONFIGURATION_BUILD_DIR=${PWD}/__build__/maccatalyst | xcpretty
+          
       # - name: Print xcarchive macOS structure
       #   run: |
       #     echo "Printing the structure of the xcarchive:"
@@ -104,11 +116,13 @@ jobs:
         run: |
           set -o pipefail && xcodebuild -create-xcframework \
           -archive ${PWD}/__build__/archives/MumbleKit-macOS.xcarchive \
-          -library libMumbleKit.a -headers ${PWD}/__build__/Headers/MumbleKit \
-          -archive ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive \
-          -library libMumbleKit.a -headers ${PWD}/__build__/Headers/MumbleKit \
+          -library libMumbleKit.a -headers ${PWD}/__build__/Headers/ \
+          -archive ${PWD}/__build__/archives/MumbleKit-MacCatalyst.xcarchive \
+          -library libMumbleKit.a -headers ${PWD}/__build__/Headers/ \
+          -archive ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive/ \
+          -library libMumbleKit.a -headers ${PWD}/__build__/Headers/ \
           -archive ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive \
-          -library libMumbleKit.a -headers ${PWD}/__build__/Headers/MumbleKit \
+          -library libMumbleKit.a -headers ${PWD}/__build__/Headers/ \
           -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
  
 
