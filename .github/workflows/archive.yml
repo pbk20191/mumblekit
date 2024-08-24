@@ -1,0 +1,114 @@
+name: Archive
+on:
+  workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Select build configuration (Release or Debug)'
+        required: true
+        default: 'Release'
+        type: choice
+        options:
+          - Release
+          - Debug
+env:
+  buildDir: ${{ github.workspace }}/build/
+
+jobs:
+  build:
+    runs-on: macos-12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '13.1'
+      - name: Install xcpretty
+        run: gem install --verbose xcpretty
+        
+      # Archive MumbleKit (Mac) Dynamic Framework
+      - name: Build MumbleKit (Mac)
+        run: |
+          set -o pipefail && xcodebuild archive -UseModernBuildSystem=NO -scheme "MumbleKit (Mac)" \
+          -configuration Release \
+          -project MumbleKit.xcodeproj \
+          -sdk iphoneos \
+          -destination 'generic/platform=macOS' \
+          -archivePath "${PWD}/__build__/archives/MumbleKit-macOS" \
+          CONFIGURATION_BUILD_DIR=${PWD}/__build__/mac | xcpretty
+                 
+      - name: Print xcarchive macOS structure
+        run: |
+          echo "Printing the structure of the xcarchive:"
+          ls -R ${PWD}/__build__/archives/MumbleKit-macOS.xcarchive
+        #  -archive "${PWD}/__build__/archives/MumbleKit-macOS.xcarchive" -framework MumbleKit.framework
+
+      # Archive MumbleKit (iOS) static Framework
+      - name: Archive MumbleKit (iOS) 
+        run: |
+          set -o pipefail && xcodebuild archive -UseModernBuildSystem=NO -scheme "MumbleKit (iOS)" \
+          -configuration ${{ github.event.inputs.build_type }} \
+          -project MumbleKit.xcodeproj \
+          -sdk iphoneos \
+          -destination 'generic/platform=iOS' \
+          -archivePath ${PWD}/__build__/archives/MumbleKit-iOS \
+          SKIP_INSTALL=NO \
+          BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
+          CONFIGURATION_BUILD_DIR=${PWD}/__build__/ios | xcpretty
+
+      # - name: Print xcarchive iOS structure
+      #   run: |
+      #     echo "Printing the structure of the xcarchive:"
+      #     find ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive
+
+      # Archive MumbleKit (iOS Simulator) static Framework
+      - name: Archive MumbleKit (iOS Simulator) 
+        run: |
+          set -o pipefail && xcodebuild archive -UseModernBuildSystem=NO -scheme "MumbleKit (iOS)" \
+          -configuration ${{ github.event.inputs.build_type }} \
+          -project MumbleKit.xcodeproj \
+          -sdk iphonesimulator \
+          -destination "generic/platform=iOS Simulator" \
+          -archivePath ${PWD}/__build__/archives/MumbleKit-iOS_Simulator \
+          SKIP_INSTALL=NO \
+          BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
+          CONFIGURATION_BUILD_DIR=${PWD}/__build__/ios_sim | xcpretty
+          
+      # - name: Print directory sim structure after build
+      #   run: |
+      #     echo "Printing the structure of the xcarchive:"
+      #     find ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive
+          
+      # - name: create iOS xcframework
+      #   run: |
+      #     set -o pipefail && xcodebuild -create-xcframework \
+      #     -archive ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive \
+      #     -library libMumbleKit.a -library libOpenSSL.a -library libProtocolBuffers.a -library libSpeexDSP.a \
+      #     -library libCELT-0.7.0.a -library libOpus.a -library libSpeex.a -headers "${PWD}/src/MumbleKit"\
+      #     -debug-symbols ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive/dSYMs \
+      #     -archive ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive \
+      #     -library libMumbleKit.a -library libOpenSSL.a -library libProtocolBuffers.a -library libSpeexDSP.a \
+      #     -library libCELT-0.7.0.a \-library libOpus.a -library libSpeex.a -headers "${PWD}/src/MumbleKit" \
+      #     -debug-symbols ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive/dSYMs \
+      #     -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
+      
+      - name: create iOS xcframework
+        run: |
+          set -o pipefail && xcodebuild -create-xcframework \
+          -archive ${PWD}/__build__/archives/MumbleKit-macOS.xcarchive \
+          -framework MumbleKit.framework \
+          -archive ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive \
+          -library libMumbleKit.a -headers "${PWD}/src/MumbleKit" \
+          -archive ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive \
+          -library libMumbleKit.a -headers "${PWD}/src/MumbleKit" \
+          -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
+ 
+
+      # Upload MumbleKit Build Artifacts
+      - name: Upload MumbleKit Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: MumbleKit-${{ github.event.inputs.build_type }}
+          path: __build__/xcframework
+
+
