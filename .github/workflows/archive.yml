@@ -25,7 +25,13 @@ jobs:
           xcode-version: '15'
       - name: Install xcpretty
         run: gem install --verbose xcpretty
-        
+
+      - name: package Header files
+        run: |
+          mkdir -p ${PWD}/__build__/Headers/MumbleKit \ &&
+          cp ${PWD}/module.modulemap ${PWD}/__build__/Headers \ &&
+          cp -R ${PWD}/src/MumbleKit/*.h ${PWD}/__build__/Headers/MumbleKit
+          
       # Archive MumbleKit (Mac) Dynamic Framework
       - name: Build MumbleKit (Mac)
         run: |
@@ -94,11 +100,7 @@ jobs:
       #     -debug-symbols ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive/dSYMs \
       #     -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
 
-      - name: package Header files
-        run: |
-          mkdir -p ${PWD}/__build__/Headers/MumbleKit \ &&
-          cp ${PWD}/module.modulemap ${PWD}/__build__/Headers \ &&
-          cp -R ${PWD}/src/MumbleKit/*.h ${PWD}/__build__/Headers/MumbleKit
+
       
       - name: create Mumble xcframework
         run: |
