@@ -1,1 +1,39 @@
-// This file has intentionally been left blank.
+// opus_prefix.h
+
+#ifndef OPUS_PREFIX_H
+#define OPUS_PREFIX_H
+
+// Change Mangling using macro to avoid conflict with CELT
+#define OPUS_PREFIX opus_
+
+#define quant_energy_finalise  OPUS_PREFIX##quant_energy_finalise
+#define quant_fine_energy      OPUS_PREFIX##quant_fine_energy
+#define ec_dec_bits            OPUS_PREFIX##ec_dec_bits
+#define clt_mdct_forward       OPUS_PREFIX##clt_mdct_forward
+#define ec_enc_done            OPUS_PREFIX##ec_enc_done
+#define ec_enc_uint            OPUS_PREFIX##ec_enc_uint
+#define unquant_coarse_energy  OPUS_PREFIX##unquant_coarse_energy
+#define unquant_energy_finalise OPUS_PREFIX##unquant_energy_finalise
+#define ec_dec_uint            OPUS_PREFIX##ec_dec_uint
+#define alg_unquant            OPUS_PREFIX##alg_unquant
+#define ec_dec_init            OPUS_PREFIX##ec_dec_init
+#define normalise_bands        OPUS_PREFIX##normalise_bands
+#define clt_mdct_backward      OPUS_PREFIX##clt_mdct_backward
+#define quant_coarse_energy    OPUS_PREFIX##quant_coarse_energy
+#define denormalise_bands      OPUS_PREFIX##denormalise_bands
+#define compute_band_energies  OPUS_PREFIX##compute_band_energies
+#define ec_decode              OPUS_PREFIX##ec_decode
+#define ec_decode_bin          OPUS_PREFIX##ec_decode_bin
+#define ec_enc_bits            OPUS_PREFIX##ec_enc_bits
+#define unquant_fine_energy    OPUS_PREFIX##unquant_fine_energy
+#define ec_encode              OPUS_PREFIX##ec_encode
+#define ec_encode_bin          OPUS_PREFIX##ec_encode_bin
+#define _celt_autocorr         OPUS_PREFIX##_celt_autocorr
+#define alg_quant              OPUS_PREFIX##alg_quant
+#define ec_dec_update          OPUS_PREFIX##ec_dec_update
+#define ec_enc_init            OPUS_PREFIX##ec_enc_init
+#define renormalise_vector     OPUS_PREFIX##renormalise_vector
+#define _celt_lpc              OPUS_PREFIX##_celt_lpc
+#define eMeans                 OPUS_PREFIX##eMeans
+
+#endif // OPUS_PREFIX_H

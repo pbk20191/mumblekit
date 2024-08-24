@@ -1,0 +1,6 @@
+module MumbleKit {
+    umbrella header "MumbleKit/MumbleKit.h"
+    
+    export *
+    module * { export * }
+}

@@ -3,61 +3,61 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1761AD7A2C79C55800D85EE0 /* AbstractMessage_Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6C7132D9A240034D631 /* AbstractMessage_Builder.m */; };
+		1761AD7B2C79C55800D85EE0 /* AbstractMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6C8132D9A240034D631 /* AbstractMessage.m */; };
+		1761AD7C2C79C55800D85EE0 /* CodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6C9132D9A240034D631 /* CodedInputStream.m */; };
+		1761AD7D2C79C55800D85EE0 /* CodedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CA132D9A240034D631 /* CodedOutputStream.m */; };
+		1761AD7E2C79C55800D85EE0 /* ConcreteExtensionField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CB132D9A240034D631 /* ConcreteExtensionField.m */; };
+		1761AD7F2C79C55800D85EE0 /* Descriptor.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CC132D9A240034D631 /* Descriptor.pb.m */; };
+		1761AD802C79C55800D85EE0 /* ExtendableMessage_Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CD132D9A240034D631 /* ExtendableMessage_Builder.m */; };
+		1761AD812C79C55800D85EE0 /* ExtendableMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CE132D9A240034D631 /* ExtendableMessage.m */; };
+		1761AD822C79C55800D85EE0 /* ExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CF132D9A240034D631 /* ExtensionRegistry.m */; };
+		1761AD832C79C55800D85EE0 /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D0132D9A240034D631 /* Field.m */; };
+		1761AD842C79C55800D85EE0 /* GeneratedMessage_Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D1132D9A240034D631 /* GeneratedMessage_Builder.m */; };
+		1761AD852C79C55800D85EE0 /* GeneratedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D2132D9A240034D631 /* GeneratedMessage.m */; };
+		1761AD862C79C55800D85EE0 /* MutableExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D3132D9A240034D631 /* MutableExtensionRegistry.m */; };
+		1761AD872C79C55800D85EE0 /* MutableField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D4132D9A240034D631 /* MutableField.m */; };
+		1761AD882C79C55800D85EE0 /* PBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D5132D9A240034D631 /* PBArray.m */; };
+		1761AD892C79C55800D85EE0 /* RingBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D6132D9A240034D631 /* RingBuffer.m */; };
+		1761AD8A2C79C55800D85EE0 /* TextFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D7132D9A240034D631 /* TextFormat.m */; };
+		1761AD8B2C79C55800D85EE0 /* UnknownFieldSet_Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D8132D9A240034D631 /* UnknownFieldSet_Builder.m */; };
+		1761AD8C2C79C55800D85EE0 /* UnknownFieldSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D9132D9A240034D631 /* UnknownFieldSet.m */; };
+		1761AD8D2C79C55800D85EE0 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6DA132D9A240034D631 /* Utilities.m */; };
+		1761AD8E2C79C55800D85EE0 /* WireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6DB132D9A240034D631 /* WireFormat.m */; };
+		1761AD902C79C55800D85EE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2845A6AA132D99550034D631 /* Foundation.framework */; };
 		2845A6AB132D99550034D631 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2845A6AA132D99550034D631 /* Foundation.framework */; };
 		2845A6DC132D9A240034D631 /* AbstractMessage_Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6C7132D9A240034D631 /* AbstractMessage_Builder.m */; };
-		2845A6DD132D9A240034D631 /* AbstractMessage_Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6C7132D9A240034D631 /* AbstractMessage_Builder.m */; };
 		2845A6DE132D9A240034D631 /* AbstractMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6C8132D9A240034D631 /* AbstractMessage.m */; };
-		2845A6DF132D9A240034D631 /* AbstractMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6C8132D9A240034D631 /* AbstractMessage.m */; };
 		2845A6E0132D9A240034D631 /* CodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6C9132D9A240034D631 /* CodedInputStream.m */; };
-		2845A6E1132D9A240034D631 /* CodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6C9132D9A240034D631 /* CodedInputStream.m */; };
 		2845A6E2132D9A240034D631 /* CodedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CA132D9A240034D631 /* CodedOutputStream.m */; };
-		2845A6E3132D9A240034D631 /* CodedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CA132D9A240034D631 /* CodedOutputStream.m */; };
 		2845A6E4132D9A240034D631 /* ConcreteExtensionField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CB132D9A240034D631 /* ConcreteExtensionField.m */; };
-		2845A6E5132D9A240034D631 /* ConcreteExtensionField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CB132D9A240034D631 /* ConcreteExtensionField.m */; };
 		2845A6E6132D9A240034D631 /* Descriptor.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CC132D9A240034D631 /* Descriptor.pb.m */; };
-		2845A6E7132D9A240034D631 /* Descriptor.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CC132D9A240034D631 /* Descriptor.pb.m */; };
 		2845A6E8132D9A240034D631 /* ExtendableMessage_Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CD132D9A240034D631 /* ExtendableMessage_Builder.m */; };
-		2845A6E9132D9A240034D631 /* ExtendableMessage_Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CD132D9A240034D631 /* ExtendableMessage_Builder.m */; };
 		2845A6EA132D9A240034D631 /* ExtendableMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CE132D9A240034D631 /* ExtendableMessage.m */; };
-		2845A6EB132D9A240034D631 /* ExtendableMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CE132D9A240034D631 /* ExtendableMessage.m */; };
 		2845A6EC132D9A240034D631 /* ExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CF132D9A240034D631 /* ExtensionRegistry.m */; };
-		2845A6ED132D9A240034D631 /* ExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6CF132D9A240034D631 /* ExtensionRegistry.m */; };
 		2845A6EE132D9A240034D631 /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D0132D9A240034D631 /* Field.m */; };
-		2845A6EF132D9A240034D631 /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D0132D9A240034D631 /* Field.m */; };
 		2845A6F0132D9A240034D631 /* GeneratedMessage_Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D1132D9A240034D631 /* GeneratedMessage_Builder.m */; };
-		2845A6F1132D9A240034D631 /* GeneratedMessage_Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D1132D9A240034D631 /* GeneratedMessage_Builder.m */; };
 		2845A6F2132D9A240034D631 /* GeneratedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D2132D9A240034D631 /* GeneratedMessage.m */; };
-		2845A6F3132D9A240034D631 /* GeneratedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D2132D9A240034D631 /* GeneratedMessage.m */; };
 		2845A6F4132D9A240034D631 /* MutableExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D3132D9A240034D631 /* MutableExtensionRegistry.m */; };
-		2845A6F5132D9A240034D631 /* MutableExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D3132D9A240034D631 /* MutableExtensionRegistry.m */; };
 		2845A6F6132D9A240034D631 /* MutableField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D4132D9A240034D631 /* MutableField.m */; };
-		2845A6F7132D9A240034D631 /* MutableField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D4132D9A240034D631 /* MutableField.m */; };
 		2845A6F8132D9A240034D631 /* PBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D5132D9A240034D631 /* PBArray.m */; };
-		2845A6F9132D9A240034D631 /* PBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D5132D9A240034D631 /* PBArray.m */; };
 		2845A6FA132D9A240034D631 /* RingBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D6132D9A240034D631 /* RingBuffer.m */; };
-		2845A6FB132D9A240034D631 /* RingBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D6132D9A240034D631 /* RingBuffer.m */; };
 		2845A6FC132D9A240034D631 /* TextFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D7132D9A240034D631 /* TextFormat.m */; };
-		2845A6FD132D9A240034D631 /* TextFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D7132D9A240034D631 /* TextFormat.m */; };
 		2845A6FE132D9A240034D631 /* UnknownFieldSet_Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D8132D9A240034D631 /* UnknownFieldSet_Builder.m */; };
-		2845A6FF132D9A240034D631 /* UnknownFieldSet_Builder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D8132D9A240034D631 /* UnknownFieldSet_Builder.m */; };
 		2845A700132D9A240034D631 /* UnknownFieldSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D9132D9A240034D631 /* UnknownFieldSet.m */; };
-		2845A701132D9A240034D631 /* UnknownFieldSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6D9132D9A240034D631 /* UnknownFieldSet.m */; };
 		2845A702132D9A240034D631 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6DA132D9A240034D631 /* Utilities.m */; };
-		2845A703132D9A240034D631 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6DA132D9A240034D631 /* Utilities.m */; };
 		2845A704132D9A240034D631 /* WireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6DB132D9A240034D631 /* WireFormat.m */; };
-		2845A705132D9A240034D631 /* WireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845A6DB132D9A240034D631 /* WireFormat.m */; };
-		2845A70D132D9AD60034D631 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2845A6BE132D99600034D631 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1761AD972C79C55800D85EE0 /* ProtocolBuffers.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = ProtocolBuffers.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		28190CF2150D5D7300E07613 /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		2845A6A7132D99550034D631 /* libProtocolBuffers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libProtocolBuffers.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2845A6AA132D99550034D631 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2845A6B8132D99600034D631 /* ProtocolBuffers.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = ProtocolBuffers.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		2845A6BE132D99600034D631 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2845A6C7132D9A240034D631 /* AbstractMessage_Builder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractMessage_Builder.m; path = ../protobuf/src/runtime/Classes/AbstractMessage_Builder.m; sourceTree = SOURCE_ROOT; };
 		2845A6C8132D9A240034D631 /* AbstractMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractMessage.m; path = ../protobuf/src/runtime/Classes/AbstractMessage.m; sourceTree = SOURCE_ROOT; };
@@ -83,19 +83,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1761AD8F2C79C55800D85EE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1761AD902C79C55800D85EE0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2845A6A4132D99550034D631 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2845A6AB132D99550034D631 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2845A6B5132D99600034D631 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2845A70D132D9AD60034D631 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				2845A6A7132D99550034D631 /* libProtocolBuffers.a */,
-				2845A6B8132D99600034D631 /* ProtocolBuffers.dylib */,
+				1761AD972C79C55800D85EE0 /* ProtocolBuffers.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,14 +193,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2845A6A5132D99550034D631 /* Headers */ = {
+		1761AD912C79C55800D85EE0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2845A6B6132D99600034D631 /* Headers */ = {
+		2845A6A5132D99550034D631 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -210,9 +210,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2845A6A6132D99550034D631 /* ProtocolBuffers (iOS) */ = {
+		1761AD782C79C55800D85EE0 /* ProtocolBuffers-dylib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2845A6B1132D99550034D631 /* Build configuration list for PBXNativeTarget "ProtocolBuffers (iOS)" */;
+			buildConfigurationList = 1761AD922C79C55800D85EE0 /* Build configuration list for PBXNativeTarget "ProtocolBuffers-dylib" */;
+			buildPhases = (
+				1761AD792C79C55800D85EE0 /* Sources */,
+				1761AD8F2C79C55800D85EE0 /* Frameworks */,
+				1761AD912C79C55800D85EE0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ProtocolBuffers-dylib";
+			productName = ProtocolBuffers;
+			productReference = 1761AD972C79C55800D85EE0 /* ProtocolBuffers.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		2845A6A6132D99550034D631 /* ProtocolBuffers-static */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2845A6B1132D99550034D631 /* Build configuration list for PBXNativeTarget "ProtocolBuffers-static" */;
 			buildPhases = (
 				2845A6A3132D99550034D631 /* Sources */,
 				2845A6A4132D99550034D631 /* Frameworks */,
@@ -222,27 +239,10 @@
 			);
 			dependencies = (
 			);
-			name = "ProtocolBuffers (iOS)";
+			name = "ProtocolBuffers-static";
 			productName = ProtocolBuffers;
 			productReference = 2845A6A7132D99550034D631 /* libProtocolBuffers.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		2845A6B7132D99600034D631 /* ProtocolBuffers (Mac) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2845A6C2132D99600034D631 /* Build configuration list for PBXNativeTarget "ProtocolBuffers (Mac)" */;
-			buildPhases = (
-				2845A6B4132D99600034D631 /* Sources */,
-				2845A6B5132D99600034D631 /* Frameworks */,
-				2845A6B6132D99600034D631 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ProtocolBuffers (Mac)";
-			productName = "ProtocolBuffers (Mac)";
-			productReference = 2845A6B8132D99600034D631 /* ProtocolBuffers.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
 
@@ -253,7 +253,7 @@
 				LastUpgradeCheck = 1230;
 			};
 			buildConfigurationList = 2845A6A1132D99550034D631 /* Build configuration list for PBXProject "ProtocolBuffers" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -265,13 +265,41 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2845A6A6132D99550034D631 /* ProtocolBuffers (iOS) */,
-				2845A6B7132D99600034D631 /* ProtocolBuffers (Mac) */,
+				2845A6A6132D99550034D631 /* ProtocolBuffers-static */,
+				1761AD782C79C55800D85EE0 /* ProtocolBuffers-dylib */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1761AD792C79C55800D85EE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1761AD7A2C79C55800D85EE0 /* AbstractMessage_Builder.m in Sources */,
+				1761AD7B2C79C55800D85EE0 /* AbstractMessage.m in Sources */,
+				1761AD7C2C79C55800D85EE0 /* CodedInputStream.m in Sources */,
+				1761AD7D2C79C55800D85EE0 /* CodedOutputStream.m in Sources */,
+				1761AD7E2C79C55800D85EE0 /* ConcreteExtensionField.m in Sources */,
+				1761AD7F2C79C55800D85EE0 /* Descriptor.pb.m in Sources */,
+				1761AD802C79C55800D85EE0 /* ExtendableMessage_Builder.m in Sources */,
+				1761AD812C79C55800D85EE0 /* ExtendableMessage.m in Sources */,
+				1761AD822C79C55800D85EE0 /* ExtensionRegistry.m in Sources */,
+				1761AD832C79C55800D85EE0 /* Field.m in Sources */,
+				1761AD842C79C55800D85EE0 /* GeneratedMessage_Builder.m in Sources */,
+				1761AD852C79C55800D85EE0 /* GeneratedMessage.m in Sources */,
+				1761AD862C79C55800D85EE0 /* MutableExtensionRegistry.m in Sources */,
+				1761AD872C79C55800D85EE0 /* MutableField.m in Sources */,
+				1761AD882C79C55800D85EE0 /* PBArray.m in Sources */,
+				1761AD892C79C55800D85EE0 /* RingBuffer.m in Sources */,
+				1761AD8A2C79C55800D85EE0 /* TextFormat.m in Sources */,
+				1761AD8B2C79C55800D85EE0 /* UnknownFieldSet_Builder.m in Sources */,
+				1761AD8C2C79C55800D85EE0 /* UnknownFieldSet.m in Sources */,
+				1761AD8D2C79C55800D85EE0 /* Utilities.m in Sources */,
+				1761AD8E2C79C55800D85EE0 /* WireFormat.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2845A6A3132D99550034D631 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,37 +328,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2845A6B4132D99600034D631 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2845A6DD132D9A240034D631 /* AbstractMessage_Builder.m in Sources */,
-				2845A6DF132D9A240034D631 /* AbstractMessage.m in Sources */,
-				2845A6E1132D9A240034D631 /* CodedInputStream.m in Sources */,
-				2845A6E3132D9A240034D631 /* CodedOutputStream.m in Sources */,
-				2845A6E5132D9A240034D631 /* ConcreteExtensionField.m in Sources */,
-				2845A6E7132D9A240034D631 /* Descriptor.pb.m in Sources */,
-				2845A6E9132D9A240034D631 /* ExtendableMessage_Builder.m in Sources */,
-				2845A6EB132D9A240034D631 /* ExtendableMessage.m in Sources */,
-				2845A6ED132D9A240034D631 /* ExtensionRegistry.m in Sources */,
-				2845A6EF132D9A240034D631 /* Field.m in Sources */,
-				2845A6F1132D9A240034D631 /* GeneratedMessage_Builder.m in Sources */,
-				2845A6F3132D9A240034D631 /* GeneratedMessage.m in Sources */,
-				2845A6F5132D9A240034D631 /* MutableExtensionRegistry.m in Sources */,
-				2845A6F7132D9A240034D631 /* MutableField.m in Sources */,
-				2845A6F9132D9A240034D631 /* PBArray.m in Sources */,
-				2845A6FB132D9A240034D631 /* RingBuffer.m in Sources */,
-				2845A6FD132D9A240034D631 /* TextFormat.m in Sources */,
-				2845A6FF132D9A240034D631 /* UnknownFieldSet_Builder.m in Sources */,
-				2845A701132D9A240034D631 /* UnknownFieldSet.m in Sources */,
-				2845A703132D9A240034D631 /* Utilities.m in Sources */,
-				2845A705132D9A240034D631 /* WireFormat.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		1761AD932C79C55800D85EE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1761AD942C79C55800D85EE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1761AD952C79C55800D85EE0 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = AppStore;
+		};
+		1761AD962C79C55800D85EE0 /* BetaDist */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = BetaDist;
+		};
 		2845A6AF132D99550034D631 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 28190CF2150D5D7300E07613 /* Base.xcconfig */;
@@ -349,28 +385,18 @@
 		2845A6B2132D99550034D631 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		2845A6B3132D99550034D631 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-			};
-			name = Release;
-		};
-		2845A6C3132D99600034D631 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		2845A6C4132D99600034D631 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				SDKROOT = macosx;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -384,14 +410,9 @@
 		28498F22138AB6C9000509DD /* BetaDist */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-			};
-			name = BetaDist;
-		};
-		28498F23138AB6C9000509DD /* BetaDist */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				SDKROOT = macosx;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = BetaDist;
 		};
@@ -405,20 +426,26 @@
 		28A2AECB1478AA1B00F3B83F /* AppStore */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-			};
-			name = AppStore;
-		};
-		28A2AECC1478AA1B00F3B83F /* AppStore */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				SDKROOT = macosx;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = AppStore;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1761AD922C79C55800D85EE0 /* Build configuration list for PBXNativeTarget "ProtocolBuffers-dylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1761AD932C79C55800D85EE0 /* Debug */,
+				1761AD942C79C55800D85EE0 /* Release */,
+				1761AD952C79C55800D85EE0 /* AppStore */,
+				1761AD962C79C55800D85EE0 /* BetaDist */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2845A6A1132D99550034D631 /* Build configuration list for PBXProject "ProtocolBuffers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -430,24 +457,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2845A6B1132D99550034D631 /* Build configuration list for PBXNativeTarget "ProtocolBuffers (iOS)" */ = {
+		2845A6B1132D99550034D631 /* Build configuration list for PBXNativeTarget "ProtocolBuffers-static" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2845A6B2132D99550034D631 /* Debug */,
 				2845A6B3132D99550034D631 /* Release */,
 				28A2AECB1478AA1B00F3B83F /* AppStore */,
 				28498F22138AB6C9000509DD /* BetaDist */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2845A6C2132D99600034D631 /* Build configuration list for PBXNativeTarget "ProtocolBuffers (Mac)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2845A6C3132D99600034D631 /* Debug */,
-				2845A6C4132D99600034D631 /* Release */,
-				28A2AECC1478AA1B00F3B83F /* AppStore */,
-				28498F23138AB6C9000509DD /* BetaDist */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -2,12 +2,14 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-ARCHS = arm64
-SDKROOT = iphoneos
+ARCHS = $(ARCHS_STANDARD)
+SDKROOT = auto
 
-MACOSX_DEPLOYMENT_TARGET = 10.7
-IPHONEOS_DEPLOYMENT_TARGET = 8.0
-
+MACOSX_DEPLOYMENT_TARGET = 10.13
+IPHONEOS_DEPLOYMENT_TARGET = 12.0
+SUPPORTS_MACCATALYST = YES
+SUPPORTED_PLATFORMS = iphonesimulator iphoneos macosx
+ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES
 SKIP_INSTALL = YES
 
 HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../openssl" "$(PROJECT_DIR)/../openssl/include" "$(PROJECT_DIR)/../openssl/crypto" "$(PROJECT_DIR)/../openssl/crypto/asn1" "$(PROJECT_DIR)/../openssl/crypto/evp"

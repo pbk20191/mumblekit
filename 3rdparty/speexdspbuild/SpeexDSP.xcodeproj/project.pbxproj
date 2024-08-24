@@ -3,28 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1761AE792C79C62F00D85EE0 /* fftwrap.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BAF132D98460015AECC /* fftwrap.c */; };
+		1761AE7A2C79C62F00D85EE0 /* filterbank.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BB2132D984B0015AECC /* filterbank.c */; };
+		1761AE7B2C79C62F00D85EE0 /* jitter.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BB5132D98560015AECC /* jitter.c */; };
+		1761AE7C2C79C62F00D85EE0 /* mdf.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BB8132D98620015AECC /* mdf.c */; };
+		1761AE7D2C79C62F00D85EE0 /* preprocess.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BBB132D986A0015AECC /* preprocess.c */; };
+		1761AE7E2C79C62F00D85EE0 /* resample.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BBE132D98710015AECC /* resample.c */; };
+		1761AE7F2C79C62F00D85EE0 /* smallft.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BC1132D987A0015AECC /* smallft.c */; };
+		1761AE812C79C62F00D85EE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28877EC1132D96F300793CC5 /* Foundation.framework */; };
 		28158BB0132D98460015AECC /* fftwrap.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BAF132D98460015AECC /* fftwrap.c */; };
-		28158BB1132D98460015AECC /* fftwrap.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BAF132D98460015AECC /* fftwrap.c */; };
 		28158BB3132D984B0015AECC /* filterbank.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BB2132D984B0015AECC /* filterbank.c */; };
-		28158BB4132D984B0015AECC /* filterbank.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BB2132D984B0015AECC /* filterbank.c */; };
 		28158BB6132D98560015AECC /* jitter.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BB5132D98560015AECC /* jitter.c */; };
-		28158BB7132D98560015AECC /* jitter.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BB5132D98560015AECC /* jitter.c */; };
 		28158BB9132D98620015AECC /* mdf.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BB8132D98620015AECC /* mdf.c */; };
-		28158BBA132D98620015AECC /* mdf.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BB8132D98620015AECC /* mdf.c */; };
 		28158BBC132D986A0015AECC /* preprocess.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BBB132D986A0015AECC /* preprocess.c */; };
-		28158BBD132D986A0015AECC /* preprocess.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BBB132D986A0015AECC /* preprocess.c */; };
 		28158BBF132D98710015AECC /* resample.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BBE132D98710015AECC /* resample.c */; };
-		28158BC0132D98710015AECC /* resample.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BBE132D98710015AECC /* resample.c */; };
 		28158BC2132D987A0015AECC /* smallft.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BC1132D987A0015AECC /* smallft.c */; };
-		28158BC3132D987A0015AECC /* smallft.c in Sources */ = {isa = PBXBuildFile; fileRef = 28158BC1132D987A0015AECC /* smallft.c */; };
 		28877EC2132D96F300793CC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28877EC1132D96F300793CC5 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1761AE882C79C62F00D85EE0 /* libSpeexDSP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpeexDSP.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1794AEFF2C79877D00CAA68A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		28158BAF132D98460015AECC /* fftwrap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fftwrap.c; path = ../speex/libspeex/fftwrap.c; sourceTree = SOURCE_ROOT; };
 		28158BB2132D984B0015AECC /* filterbank.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = filterbank.c; path = ../speex/libspeex/filterbank.c; sourceTree = SOURCE_ROOT; };
 		28158BB5132D98560015AECC /* jitter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = jitter.c; path = ../speex/libspeex/jitter.c; sourceTree = SOURCE_ROOT; };
@@ -35,23 +38,23 @@
 		28190D0B150D624800E07613 /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		28877EBE132D96F300793CC5 /* libSpeexDSP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpeexDSP.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		28877EC1132D96F300793CC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		28877ECF132D975D00793CC5 /* SpeexDSP.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = SpeexDSP.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		28877ED5132D975D00793CC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1761AE802C79C62F00D85EE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1761AE812C79C62F00D85EE0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		28877EBB132D96F300793CC5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				28877EC2132D96F300793CC5 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		28877ECC132D975D00793CC5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				28877EBE132D96F300793CC5 /* libSpeexDSP.a */,
-				28877ECF132D975D00793CC5 /* SpeexDSP.dylib */,
+				1761AE882C79C62F00D85EE0 /* libSpeexDSP.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +91,7 @@
 		28877EC0132D96F300793CC5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1794AEFF2C79877D00CAA68A /* Foundation.framework */,
 				28877EDC132D979900793CC5 /* iOS Frameworks */,
 				28877ED2132D975D00793CC5 /* Mac Frameworks */,
 			);
@@ -143,14 +147,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		28877EBC132D96F300793CC5 /* Headers */ = {
+		1761AE822C79C62F00D85EE0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28877ECD132D975D00793CC5 /* Headers */ = {
+		28877EBC132D96F300793CC5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -160,9 +164,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		28877EBD132D96F300793CC5 /* SpeexDSP (iOS) */ = {
+		1761AE772C79C62F00D85EE0 /* SpeexDSP-dylib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28877EC8132D96F300793CC5 /* Build configuration list for PBXNativeTarget "SpeexDSP (iOS)" */;
+			buildConfigurationList = 1761AE832C79C62F00D85EE0 /* Build configuration list for PBXNativeTarget "SpeexDSP-dylib" */;
+			buildPhases = (
+				1761AE782C79C62F00D85EE0 /* Sources */,
+				1761AE802C79C62F00D85EE0 /* Frameworks */,
+				1761AE822C79C62F00D85EE0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SpeexDSP-dylib";
+			productName = SpeexDSP;
+			productReference = 1761AE882C79C62F00D85EE0 /* libSpeexDSP.a */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		28877EBD132D96F300793CC5 /* SpeexDSP-static */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28877EC8132D96F300793CC5 /* Build configuration list for PBXNativeTarget "SpeexDSP-static" */;
 			buildPhases = (
 				28877EBA132D96F300793CC5 /* Sources */,
 				28877EBB132D96F300793CC5 /* Frameworks */,
@@ -172,27 +193,10 @@
 			);
 			dependencies = (
 			);
-			name = "SpeexDSP (iOS)";
+			name = "SpeexDSP-static";
 			productName = SpeexDSP;
 			productReference = 28877EBE132D96F300793CC5 /* libSpeexDSP.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		28877ECE132D975D00793CC5 /* SpeexDSP (Mac) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 28877ED9132D975D00793CC5 /* Build configuration list for PBXNativeTarget "SpeexDSP (Mac)" */;
-			buildPhases = (
-				28877ECB132D975D00793CC5 /* Sources */,
-				28877ECC132D975D00793CC5 /* Frameworks */,
-				28877ECD132D975D00793CC5 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "SpeexDSP (Mac)";
-			productName = "SpeexDSP (Mac)";
-			productReference = 28877ECF132D975D00793CC5 /* SpeexDSP.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
 
@@ -203,7 +207,7 @@
 				LastUpgradeCheck = 1230;
 			};
 			buildConfigurationList = 28877EB8132D96F300793CC5 /* Build configuration list for PBXProject "SpeexDSP" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -215,13 +219,27 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				28877EBD132D96F300793CC5 /* SpeexDSP (iOS) */,
-				28877ECE132D975D00793CC5 /* SpeexDSP (Mac) */,
+				28877EBD132D96F300793CC5 /* SpeexDSP-static */,
+				1761AE772C79C62F00D85EE0 /* SpeexDSP-dylib */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1761AE782C79C62F00D85EE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1761AE792C79C62F00D85EE0 /* fftwrap.c in Sources */,
+				1761AE7A2C79C62F00D85EE0 /* filterbank.c in Sources */,
+				1761AE7B2C79C62F00D85EE0 /* jitter.c in Sources */,
+				1761AE7C2C79C62F00D85EE0 /* mdf.c in Sources */,
+				1761AE7D2C79C62F00D85EE0 /* preprocess.c in Sources */,
+				1761AE7E2C79C62F00D85EE0 /* resample.c in Sources */,
+				1761AE7F2C79C62F00D85EE0 /* smallft.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		28877EBA132D96F300793CC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,23 +254,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28877ECB132D975D00793CC5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28158BB1132D98460015AECC /* fftwrap.c in Sources */,
-				28158BB4132D984B0015AECC /* filterbank.c in Sources */,
-				28158BB7132D98560015AECC /* jitter.c in Sources */,
-				28158BBA132D98620015AECC /* mdf.c in Sources */,
-				28158BBD132D986A0015AECC /* preprocess.c in Sources */,
-				28158BC0132D98710015AECC /* resample.c in Sources */,
-				28158BC3132D987A0015AECC /* smallft.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		1761AE842C79C62F00D85EE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1761AE852C79C62F00D85EE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1761AE862C79C62F00D85EE0 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = AppStore;
+		};
+		1761AE872C79C62F00D85EE0 /* BetaDist */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = BetaDist;
+		};
 		28498F2D138AB6E2000509DD /* BetaDist */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 28190D0B150D624800E07613 /* Base.xcconfig */;
@@ -263,14 +303,9 @@
 		28498F2E138AB6E2000509DD /* BetaDist */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-			};
-			name = BetaDist;
-		};
-		28498F2F138AB6E2000509DD /* BetaDist */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				SDKROOT = macosx;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = BetaDist;
 		};
@@ -279,6 +314,7 @@
 			baseConfigurationReference = 28190D0B150D624800E07613 /* Base.xcconfig */;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Debug;
 		};
@@ -292,28 +328,18 @@
 		28877EC9132D96F300793CC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		28877ECA132D96F300793CC5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-			};
-			name = Release;
-		};
-		28877EDA132D975D00793CC5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		28877EDB132D975D00793CC5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				SDKROOT = macosx;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -327,20 +353,26 @@
 		28A2AED71478AA3C00F3B83F /* AppStore */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-			};
-			name = AppStore;
-		};
-		28A2AED81478AA3C00F3B83F /* AppStore */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				SDKROOT = macosx;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = AppStore;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1761AE832C79C62F00D85EE0 /* Build configuration list for PBXNativeTarget "SpeexDSP-dylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1761AE842C79C62F00D85EE0 /* Debug */,
+				1761AE852C79C62F00D85EE0 /* Release */,
+				1761AE862C79C62F00D85EE0 /* AppStore */,
+				1761AE872C79C62F00D85EE0 /* BetaDist */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		28877EB8132D96F300793CC5 /* Build configuration list for PBXProject "SpeexDSP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -352,24 +384,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		28877EC8132D96F300793CC5 /* Build configuration list for PBXNativeTarget "SpeexDSP (iOS)" */ = {
+		28877EC8132D96F300793CC5 /* Build configuration list for PBXNativeTarget "SpeexDSP-static" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28877EC9132D96F300793CC5 /* Debug */,
 				28877ECA132D96F300793CC5 /* Release */,
 				28A2AED71478AA3C00F3B83F /* AppStore */,
 				28498F2E138AB6E2000509DD /* BetaDist */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		28877ED9132D975D00793CC5 /* Build configuration list for PBXNativeTarget "SpeexDSP (Mac)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				28877EDA132D975D00793CC5 /* Debug */,
-				28877EDB132D975D00793CC5 /* Release */,
-				28A2AED81478AA3C00F3B83F /* AppStore */,
-				28498F2F138AB6E2000509DD /* BetaDist */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
