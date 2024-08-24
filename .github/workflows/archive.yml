@@ -31,18 +31,19 @@ jobs:
           mkdir -p ${PWD}/__build__/Headers/MumbleKit && \
           cp ${PWD}/module.modulemap ${PWD}/__build__/Headers/ && \
           cp ${PWD}/src/MumbleKit/*.h ${PWD}/__build__/Headers/MumbleKit/
-          
+
+      # Mac Catalyst target is not available in Github Free Runner
       # Archive MumbleKit (Mac Catalyst)
-      - name: Build MumbleKit (Mac Catalyst)
-        run: |
-          set -o pipefail && xcodebuild archive -scheme "MumbleKit-static" \
-          -configuration Release \
-          -project MumbleKit.xcodeproj \
-          -destination "generic/platform=macOS,variant=Mac Catalyst" \
-          -archivePath "${PWD}/__build__/archives/MumbleKit-MacCatalyst" \
-          SKIP_INSTALL=NO \
-          BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
-          CONFIGURATION_BUILD_DIR=${PWD}/__build__/maccatalyst | xcpretty
+      # - name: Build MumbleKit (Mac Catalyst)
+      #   run: |
+      #     set -o pipefail && xcodebuild archive -scheme "MumbleKit-static" \
+      #     -configuration Release \
+      #     -project MumbleKit.xcodeproj \
+      #     -destination "generic/platform=macOS,variant=Mac Catalyst" \
+      #     -archivePath "${PWD}/__build__/archives/MumbleKit-MacCatalyst" \
+      #     SKIP_INSTALL=NO \
+      #     BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
+      #     CONFIGURATION_BUILD_DIR=${PWD}/__build__/maccatalyst | xcpretty
           
       # Archive MumbleKit (Mac)
       - name: Build MumbleKit (Mac)
@@ -112,12 +113,13 @@ jobs:
       #     -debug-symbols ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive/dSYMs \
       #     -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
 
+          # -archive ${PWD}/__build__/archives/MumbleKit-MacCatalyst.xcarchive \
+          # -library libMumbleKit.a -headers ${PWD}/__build__/Headers/ \
+
       - name: create Mumble xcframework
         run: |
           set -o pipefail && xcodebuild -create-xcframework \
           -archive ${PWD}/__build__/archives/MumbleKit-macOS.xcarchive \
-          -library libMumbleKit.a -headers ${PWD}/__build__/Headers/ \
-          -archive ${PWD}/__build__/archives/MumbleKit-MacCatalyst.xcarchive \
           -library libMumbleKit.a -headers ${PWD}/__build__/Headers/ \
           -archive ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive/ \
           -library libMumbleKit.a -headers ${PWD}/__build__/Headers/ \
