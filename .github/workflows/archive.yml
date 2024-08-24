@@ -109,11 +109,11 @@ jobs:
           -library libMumbleKit.a -headers ${PWD}/__build__/Headers/MumbleKit \
           -archive ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive \
           -library libMumbleKit.a -headers ${PWD}/__build__/Headers/MumbleKit \
-          -archive ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive \
-          -library libMumbleKit.a -headers ${PWD}/__build__/Headers/MumbleKit \
+
           -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
  
-
+          # -archive ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive \
+          # -library libMumbleKit.a -headers ${PWD}/__build__/Headers/MumbleKit \
       # Upload MumbleKit Build Artifacts
       - name: Upload MumbleKit Artifacts
         uses: actions/upload-artifact@v4
