@@ -64,23 +64,23 @@ jobs:
           BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
           CONFIGURATION_BUILD_DIR=${PWD}/__build__/ios | xcpretty
 
-      # - name: Print xcarchive iOS structure
-      #   run: |
-      #     echo "Printing the structure of the xcarchive:"
-      #     find ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive
+      - name: Print xcarchive iOS structure
+        run: |
+          echo "Printing the structure of the xcarchive:"
+          find ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive
 
       # Archive MumbleKit (iOS Simulator) static Framework
-      - name: Archive MumbleKit (iOS Simulator) 
-        run: |
-          set -o pipefail && xcodebuild archive -scheme "MumbleKit-static" \
-          -configuration ${{ github.event.inputs.build_type }} \
-          -project MumbleKit.xcodeproj \
-          -sdk iphonesimulator \
-          -destination "generic/platform=iOS Simulator" \
-          -archivePath ${PWD}/__build__/archives/MumbleKit-iOS_Simulator \
-          SKIP_INSTALL=NO \
-          BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
-          CONFIGURATION_BUILD_DIR=${PWD}/__build__/ios_sim | xcpretty
+      # - name: Archive MumbleKit (iOS Simulator) 
+      #   run: |
+      #     set -o pipefail && xcodebuild archive -scheme "MumbleKit-static" \
+      #     -configuration ${{ github.event.inputs.build_type }} \
+      #     -project MumbleKit.xcodeproj \
+      #     -sdk iphonesimulator \
+      #     -destination "generic/platform=iOS Simulator" \
+      #     -archivePath ${PWD}/__build__/archives/MumbleKit-iOS_Simulator \
+      #     SKIP_INSTALL=NO \
+      #     BUILD_LIBRARIES_FOR_DISTRIBUTION=YES \
+      #     CONFIGURATION_BUILD_DIR=${PWD}/__build__/ios_sim | xcpretty
           
       # - name: Print directory sim structure after build
       #   run: |
