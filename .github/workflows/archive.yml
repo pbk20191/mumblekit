@@ -29,8 +29,8 @@ jobs:
       - name: package Header files
         run: |
           mkdir -p ${PWD}/__build__/Headers/MumbleKit \ &&
-          cp ${PWD}/module.modulemap ${PWD}/__build__/Headers \ &&
-          cp -R ${PWD}/src/MumbleKit/*.h ${PWD}/__build__/Headers/MumbleKit
+          cp ${PWD}/module.modulemap ${PWD}/__build__/Headers/ \ &&
+          cp -R ${PWD}/src/MumbleKit/*.h ${PWD}/__build__/Headers/MumbleKit/
           
       # Archive MumbleKit (Mac) Dynamic Framework
       - name: Build MumbleKit (Mac)
