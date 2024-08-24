@@ -30,7 +30,7 @@ jobs:
         run: |
           mkdir -p ${PWD}/__build__/Headers/MumbleKit && \
           cp ${PWD}/module.modulemap ${PWD}/__build__/Headers/ && \
-          cp ${PWD}/src/MumbleKit/*.h ${PWD}/__build__/Headers/MumbleKit/ && \
+          cp ${PWD}/src/MumbleKit/*.h ${PWD}/__build__/Headers/MumbleKit/
           
       # Archive MumbleKit (Mac)
       - name: Build MumbleKit (Mac)
