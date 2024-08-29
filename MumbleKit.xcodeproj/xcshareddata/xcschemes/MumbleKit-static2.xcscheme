@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1600"
+   LastUpgradeVersion = "1540"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2845A719132D9B2F0034D631"
-               BuildableName = "MumbleKit.framework"
-               BlueprintName = "MumbleKit-dynamic"
+               BlueprintIdentifier = "17A6483B2C8000C300AAE816"
+               BuildableName = "MumbleKit-static2.framework"
+               BlueprintName = "MumbleKit-static2"
                ReferencedContainer = "container:MumbleKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -50,9 +50,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2845A719132D9B2F0034D631"
-            BuildableName = "MumbleKit.framework"
-            BlueprintName = "MumbleKit-dynamic"
+            BlueprintIdentifier = "17A6483B2C8000C300AAE816"
+            BuildableName = "MumbleKit-static2.framework"
+            BlueprintName = "MumbleKit-static2"
             ReferencedContainer = "container:MumbleKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
