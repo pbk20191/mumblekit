@@ -139,7 +139,6 @@ jobs:
 
 
       - name: create Mumble xcframework from framework
-        if: ${{ github.event.inputs.output_type != 'static' }}
         run: |
           set -o pipefail && xcodebuild -create-xcframework \
           -archive ${PWD}/__build__/archives/MumbleKit-macOS.xcarchive \
