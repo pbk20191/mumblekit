@@ -17,18 +17,14 @@
 		1761AAEF2C79C2A100D85EE0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1761AAEE2C79C2A100D85EE0 /* AudioToolbox.framework */; };
 		1761AE9B2C79C66600D85EE0 /* libCELT-0.7.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28492310132ED60700B4EAAC /* libCELT-0.7.0.a */; };
 		1761AE9C2C79C67600D85EE0 /* libOpenSSL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1794B1862C798AA700CAA68A /* libOpenSSL.a */; };
-		1761AEAF2C79C8AB00D85EE0 /* libCELT-0.7.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1761AE8B2C79C65E00D85EE0 /* libCELT-0.7.0.a */; };
-		1761AEB02C79C8AB00D85EE0 /* libCELT-0.7.0.a in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1761AE8B2C79C65E00D85EE0 /* libCELT-0.7.0.a */; };
-		1761AEB22C79C8AE00D85EE0 /* libOpenSSL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1761AE8E2C79C65E00D85EE0 /* libOpenSSL.a */; };
-		1761AEB32C79C8AE00D85EE0 /* libOpenSSL.a in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1761AE8E2C79C65E00D85EE0 /* libOpenSSL.a */; };
-		1761AEB42C79C8B400D85EE0 /* libOpus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1761AE912C79C65E00D85EE0 /* libOpus.a */; };
-		1761AEB52C79C8B500D85EE0 /* libOpus.a in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1761AE912C79C65E00D85EE0 /* libOpus.a */; };
-		1761AEB62C79C8B700D85EE0 /* libProtocolBuffers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1761AE942C79C65E00D85EE0 /* libProtocolBuffers.a */; };
-		1761AEB72C79C8B700D85EE0 /* libProtocolBuffers.a in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1761AE942C79C65E00D85EE0 /* libProtocolBuffers.a */; };
-		1761AEB82C79C8BB00D85EE0 /* libSpeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1761AE972C79C65E00D85EE0 /* libSpeex.a */; };
-		1761AEB92C79C8BB00D85EE0 /* libSpeex.a in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1761AE972C79C65E00D85EE0 /* libSpeex.a */; };
-		1761AEBA2C79C8BF00D85EE0 /* libSpeexDSP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1761AE9A2C79C65E00D85EE0 /* libSpeexDSP.a */; };
-		1761AEBB2C79C8C000D85EE0 /* libSpeexDSP.a in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1761AE9A2C79C65E00D85EE0 /* libSpeexDSP.a */; };
+		1761AEAF2C79C8AB00D85EE0 /* CELT-0.7.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1761AE8B2C79C65E00D85EE0 /* CELT-0.7.0.dylib */; };
+		1761AEB22C79C8AE00D85EE0 /* OpenSSL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1761AE8E2C79C65E00D85EE0 /* OpenSSL.dylib */; };
+		1761AEB32C79C8AE00D85EE0 /* OpenSSL.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1761AE8E2C79C65E00D85EE0 /* OpenSSL.dylib */; };
+		1761AEB42C79C8B400D85EE0 /* Opus.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1761AE912C79C65E00D85EE0 /* Opus.dylib */; };
+		1761AEB62C79C8B700D85EE0 /* ProtocolBuffers.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1761AE942C79C65E00D85EE0 /* ProtocolBuffers.dylib */; };
+		1761AEB72C79C8B700D85EE0 /* ProtocolBuffers.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1761AE942C79C65E00D85EE0 /* ProtocolBuffers.dylib */; };
+		1761AEB82C79C8BB00D85EE0 /* Speex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1761AE972C79C65E00D85EE0 /* Speex.dylib */; };
+		1761AEBA2C79C8BF00D85EE0 /* SpeexDSP.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1761AE9A2C79C65E00D85EE0 /* SpeexDSP.dylib */; };
 		176D5AFE2C79A2830003D1FF /* MKiOSAudioDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 288211C6161CECD000E72F91 /* MKiOSAudioDevice.m */; platformFilters = (ios, maccatalyst, ); };
 		1794B1B62C79928B00CAA68A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1794B1B52C79928B00CAA68A /* AudioToolbox.framework */; };
 		1794B1B82C79929400CAA68A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1794B1B72C79929400CAA68A /* Foundation.framework */; };
@@ -38,6 +34,10 @@
 		1794B4692C79A21A00CAA68A /* MumbleKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1794B4682C79A21A00CAA68A /* MumbleKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1794B46A2C79A21A00CAA68A /* MumbleKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1794B4682C79A21A00CAA68A /* MumbleKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1794B46B2C79A23D00CAA68A /* MKiOSAudioDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 288211C5161CECD000E72F91 /* MKiOSAudioDevice.h */; platformFilters = (ios, maccatalyst, ); };
+		17A648372C7FFF2B00AAE816 /* CELT-0.7.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1761AE8B2C79C65E00D85EE0 /* CELT-0.7.0.dylib */; };
+		17A648382C7FFF2E00AAE816 /* Opus.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1761AE912C79C65E00D85EE0 /* Opus.dylib */; };
+		17A648392C7FFF3400AAE816 /* Speex.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1761AE972C79C65E00D85EE0 /* Speex.dylib */; };
+		17A6483A2C7FFF4100AAE816 /* SpeexDSP.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 1761AE9A2C79C65E00D85EE0 /* SpeexDSP.dylib */; };
 		28074E90158A6E5100E0A4D0 /* MKAudioOutputSidetone.h in Headers */ = {isa = PBXBuildFile; fileRef = 28074E8E158A6E5100E0A4D0 /* MKAudioOutputSidetone.h */; };
 		28074E91158A6E5100E0A4D0 /* MKAudioOutputSidetone.h in Headers */ = {isa = PBXBuildFile; fileRef = 28074E8E158A6E5100E0A4D0 /* MKAudioOutputSidetone.h */; };
 		28074E92158A6E5100E0A4D0 /* MKAudioOutputSidetone.m in Sources */ = {isa = PBXBuildFile; fileRef = 28074E8F158A6E5100E0A4D0 /* MKAudioOutputSidetone.m */; };
@@ -293,12 +293,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1761AEBB2C79C8C000D85EE0 /* libSpeexDSP.a in Embed Libraries */,
-				1761AEB52C79C8B500D85EE0 /* libOpus.a in Embed Libraries */,
-				1761AEB02C79C8AB00D85EE0 /* libCELT-0.7.0.a in Embed Libraries */,
-				1761AEB92C79C8BB00D85EE0 /* libSpeex.a in Embed Libraries */,
-				1761AEB72C79C8B700D85EE0 /* libProtocolBuffers.a in Embed Libraries */,
-				1761AEB32C79C8AE00D85EE0 /* libOpenSSL.a in Embed Libraries */,
+				17A6483A2C7FFF4100AAE816 /* SpeexDSP.dylib in Embed Libraries */,
+				17A648392C7FFF3400AAE816 /* Speex.dylib in Embed Libraries */,
+				17A648382C7FFF2E00AAE816 /* Opus.dylib in Embed Libraries */,
+				17A648372C7FFF2B00AAE816 /* CELT-0.7.0.dylib in Embed Libraries */,
+				1761AEB32C79C8AE00D85EE0 /* OpenSSL.dylib in Embed Libraries */,
+				1761AEB72C79C8B700D85EE0 /* ProtocolBuffers.dylib in Embed Libraries */,
 			);
 			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,17 +420,17 @@
 			files = (
 				1761AAEF2C79C2A100D85EE0 /* AudioToolbox.framework in Frameworks */,
 				1761AADD2C79AA2900D85EE0 /* CoreAudio.framework in Frameworks */,
-				1761AEB62C79C8B700D85EE0 /* libProtocolBuffers.a in Frameworks */,
-				1761AEAF2C79C8AB00D85EE0 /* libCELT-0.7.0.a in Frameworks */,
-				1761AEB42C79C8B400D85EE0 /* libOpus.a in Frameworks */,
+				1761AEB62C79C8B700D85EE0 /* ProtocolBuffers.dylib in Frameworks */,
+				1761AEAF2C79C8AB00D85EE0 /* CELT-0.7.0.dylib in Frameworks */,
+				1761AEB42C79C8B400D85EE0 /* Opus.dylib in Frameworks */,
 				1761AACE2C79A67C00D85EE0 /* CFNetwork.framework in Frameworks */,
-				1761AEB82C79C8BB00D85EE0 /* libSpeex.a in Frameworks */,
-				1761AEBA2C79C8BF00D85EE0 /* libSpeexDSP.a in Frameworks */,
+				1761AEB82C79C8BB00D85EE0 /* Speex.dylib in Frameworks */,
+				1761AEBA2C79C8BF00D85EE0 /* SpeexDSP.dylib in Frameworks */,
 				28CC36F1132ED89A00241269 /* CoreServices.framework in Frameworks */,
 				28CC36ED132ED88200241269 /* Foundation.framework in Frameworks */,
 				28CC36EB132ED87100241269 /* Security.framework in Frameworks */,
 				1794B1BD2C7992A800CAA68A /* UIKit.framework in Frameworks */,
-				1761AEB22C79C8AE00D85EE0 /* libOpenSSL.a in Frameworks */,
+				1761AEB22C79C8AE00D85EE0 /* OpenSSL.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,7 +589,7 @@
 			isa = PBXGroup;
 			children = (
 				28492310132ED60700B4EAAC /* libCELT-0.7.0.a */,
-				1761AE8B2C79C65E00D85EE0 /* libCELT-0.7.0.a */,
+				1761AE8B2C79C65E00D85EE0 /* CELT-0.7.0.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -598,7 +598,7 @@
 			isa = PBXGroup;
 			children = (
 				2849232A132ED61800B4EAAC /* libProtocolBuffers.a */,
-				1761AE942C79C65E00D85EE0 /* libProtocolBuffers.a */,
+				1761AE942C79C65E00D85EE0 /* ProtocolBuffers.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -607,7 +607,7 @@
 			isa = PBXGroup;
 			children = (
 				1794B1862C798AA700CAA68A /* libOpenSSL.a */,
-				1761AE8E2C79C65E00D85EE0 /* libOpenSSL.a */,
+				1761AE8E2C79C65E00D85EE0 /* OpenSSL.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -616,7 +616,7 @@
 			isa = PBXGroup;
 			children = (
 				28492345132ED64D00B4EAAC /* libSpeex.a */,
-				1761AE972C79C65E00D85EE0 /* libSpeex.a */,
+				1761AE972C79C65E00D85EE0 /* Speex.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -625,7 +625,7 @@
 			isa = PBXGroup;
 			children = (
 				28492351132ED65800B4EAAC /* libSpeexDSP.a */,
-				1761AE9A2C79C65E00D85EE0 /* libSpeexDSP.a */,
+				1761AE9A2C79C65E00D85EE0 /* SpeexDSP.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -634,7 +634,7 @@
 			isa = PBXGroup;
 			children = (
 				285B426114E6E1200045E282 /* libOpus.a */,
-				1761AE912C79C65E00D85EE0 /* libOpus.a */,
+				1761AE912C79C65E00D85EE0 /* Opus.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -882,45 +882,45 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		1761AE8B2C79C65E00D85EE0 /* libCELT-0.7.0.a */ = {
+		1761AE8B2C79C65E00D85EE0 /* CELT-0.7.0.dylib */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libCELT-0.7.0.a";
+			fileType = "compiled.mach-o.dylib";
+			path = "CELT-0.7.0.dylib";
 			remoteRef = 1761AE8A2C79C65E00D85EE0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1761AE8E2C79C65E00D85EE0 /* libOpenSSL.a */ = {
+		1761AE8E2C79C65E00D85EE0 /* OpenSSL.dylib */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libOpenSSL.a;
+			fileType = "compiled.mach-o.dylib";
+			path = OpenSSL.dylib;
 			remoteRef = 1761AE8D2C79C65E00D85EE0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1761AE912C79C65E00D85EE0 /* libOpus.a */ = {
+		1761AE912C79C65E00D85EE0 /* Opus.dylib */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libOpus.a;
+			fileType = "compiled.mach-o.dylib";
+			path = Opus.dylib;
 			remoteRef = 1761AE902C79C65E00D85EE0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1761AE942C79C65E00D85EE0 /* libProtocolBuffers.a */ = {
+		1761AE942C79C65E00D85EE0 /* ProtocolBuffers.dylib */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libProtocolBuffers.a;
+			fileType = "compiled.mach-o.dylib";
+			path = ProtocolBuffers.dylib;
 			remoteRef = 1761AE932C79C65E00D85EE0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1761AE972C79C65E00D85EE0 /* libSpeex.a */ = {
+		1761AE972C79C65E00D85EE0 /* Speex.dylib */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSpeex.a;
+			fileType = "compiled.mach-o.dylib";
+			path = Speex.dylib;
 			remoteRef = 1761AE962C79C65E00D85EE0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1761AE9A2C79C65E00D85EE0 /* libSpeexDSP.a */ = {
+		1761AE9A2C79C65E00D85EE0 /* SpeexDSP.dylib */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSpeexDSP.a;
+			fileType = "compiled.mach-o.dylib";
+			path = SpeexDSP.dylib;
 			remoteRef = 1761AE992C79C65E00D85EE0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};

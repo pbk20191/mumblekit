@@ -54,7 +54,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1761ADB72C79C5BB00D85EE0 /* libCELT-0.7.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCELT-0.7.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1761ADB72C79C5BB00D85EE0 /* CELT-0.7.0.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "CELT-0.7.0.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		280D5F85132AE73C00540C3D /* libCELT-0.7.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCELT-0.7.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		280D5F88132AE73C00540C3D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		28190CFB150D600400E07613 /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
