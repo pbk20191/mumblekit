@@ -144,13 +144,17 @@ jobs:
           set -o pipefail && xcodebuild -create-xcframework \
           -archive ${PWD}/__build__/archives/MumbleKit-macOS.xcarchive \
           -framework MumbleKit.framework \
+          -archive ${PWD}/__build__/archives/MumbleKit-iOS.xcarchive/ \
+          -framework MumbleKit.framework \
+          -archive ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive \
+          -framework MumbleKit.framework \
           -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
 
       # Upload MumbleKit Build Artifacts
       - name: Upload MumbleKit Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: MumbleKit-${{ github.event.inputs.build_type }}
+          name: MumbleKit-${{ github.event.inputs.output_type }}-${{ github.event.inputs.build_type }}
           path: __build__/xcframework
 
 
