@@ -143,7 +143,7 @@ jobs:
         run: |
           set -o pipefail && xcodebuild -create-xcframework \
           -archive ${PWD}/__build__/archives/MumbleKit-macOS.xcarchive \
-          -framework MumbleKit \
+          -framework MumbleKit.framework \
           -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
 
       # Upload MumbleKit Build Artifacts
