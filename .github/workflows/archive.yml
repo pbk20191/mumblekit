@@ -10,6 +10,14 @@ on:
         options:
           - Release
           - Debug
+      output_type:
+        description: 'Select output type (static or dynamic) framework'
+        required: true
+        default: 'static'
+        type: choice
+        options:
+          - static
+          - dynamic
 env:
   buildDir: ${{ github.workspace }}/build/
 
@@ -48,8 +56,8 @@ jobs:
       # Archive MumbleKit (Mac)
       - name: Build MumbleKit (Mac)
         run: |
-          set -o pipefail && xcodebuild archive -scheme "MumbleKit-static" \
-          -configuration Release \
+          set -o pipefail && xcodebuild archive -scheme MumbleKit-${{ github.event.inputs.output_type }} \
+          -configuration ${{ github.event.inputs.build_type }} \
           -project MumbleKit.xcodeproj \
           -sdk macosx  \
           -destination 'generic/platform=macOS' \
@@ -67,7 +75,7 @@ jobs:
       # Archive MumbleKit (iOS)
       - name: Archive MumbleKit (iOS) 
         run: |
-          set -o pipefail && xcodebuild archive -scheme "MumbleKit-static" \
+          set -o pipefail && xcodebuild archive -scheme MumbleKit-${{ github.event.inputs.output_type }} \
           -configuration ${{ github.event.inputs.build_type }} \
           -project MumbleKit.xcodeproj \
           -sdk iphoneos \
@@ -85,7 +93,7 @@ jobs:
       # Archive MumbleKit (iOS Simulator)
       - name: Archive MumbleKit (iOS Simulator) 
         run: |
-          set -o pipefail && xcodebuild archive -scheme "MumbleKit-static" \
+          set -o pipefail && xcodebuild archive -scheme MumbleKit-${{ github.event.inputs.output_type }} \
           -configuration ${{ github.event.inputs.build_type }} \
           -project MumbleKit.xcodeproj \
           -sdk iphonesimulator \
@@ -126,7 +134,6 @@ jobs:
           -archive ${PWD}/__build__/archives/MumbleKit-iOS_Simulator.xcarchive \
           -library libMumbleKit.a -headers ${PWD}/__build__/Headers/ \
           -output ${PWD}/__build__/xcframework/MumbleKit.xcframework | xcpretty
- 
 
       # Upload MumbleKit Build Artifacts
       - name: Upload MumbleKit Artifacts
